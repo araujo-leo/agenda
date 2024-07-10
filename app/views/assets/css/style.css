@@ -1,0 +1,16 @@
+form #cadastrar_amigos{
+    display: none;
+}
+
+/*HOME*/
+.container{
+    margin: auto;
+    height: 100vh;
+    background-color: black;
+}
+
+.action{
+    margin: auto;
+    display: flex;
+    width: 100vw;
+}
