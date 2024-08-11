@@ -1,7 +1,4 @@
     <?php 
-
-
-
     class UserModel {
 
         public static function getAllUsers() {
@@ -29,7 +26,7 @@
             $stmt->bind_param("sss", $dadosCadastro['name'], $dadosCadastro['email'], $passwordHash);
             
             if ($stmt->execute()) {
-                echo '<script>alert("Cadastro Efetuado!"); window.location.href = "/";</script>';
+                echo '<script>alert("Cadastro Efetuado!"); window.location.href = "../public/";</script>';
                 exit();
             } else {
                 echo '<script>alert("Erro ao inserir dados' . $conn->error . '");</script>';
@@ -60,13 +57,13 @@
                     $_SESSION['login'] = TRUE;
 
                     $_SESSION['userData'] = $usuario;
-                    echo '<script> window.location.href = "/";</script>';
+                    echo '<script> window.location.href = "../public/";</script>';
                     exit(); 
                 } else {
-                    echo '<script>alert("Senha incorreta");</script>';
+                    echo '<script>alert("Usuário ou senha incorreta!");</script>';
                 }
             } else {
-                echo '<script>alert("Usuário não encotrado");</script>';
+                echo '<script>alert("Usuário ou senha incorreta!");</script>';
             }
         
             $conn->close();
@@ -97,7 +94,7 @@
             $stmt->bind_param("ssssi", $novoNome, $novoEmail, $passwordHash, $imagePath, $_SESSION['userData']['cod']);
             
             if ($stmt->execute()) {
-                echo '<script>alert("Dados atualizados com sucesso."); window.location.href = "/";</script>';
+                echo '<script>alert("Dados atualizados com sucesso."); window.location.href = "../public/";</script>';
                 $_SESSION['userData']['nome'] = $novoNome;
                 $_SESSION['userData']['email'] = $novoEmail;
                 $_SESSION['userData']['senha'] = $passwordHash;

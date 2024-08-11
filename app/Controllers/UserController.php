@@ -28,7 +28,7 @@ class UserController {
                 }            
             }
         } else {
-            header('Location: ../');
+            header('Location: ../public/');
         }
     }
 
@@ -52,7 +52,7 @@ class UserController {
                 }            
             }
         } else {
-            header('Location: ../');
+            header('Location: ../public/');
         }
     }
 
@@ -68,20 +68,20 @@ class UserController {
                 echo 'Erro ao processar o logout: ' . $e->getMessage(); 
             }
         } else {
-            header('Location: ../');
+            header('Location: ../public/');
         }
     }
 
     private function processarLogout() {
         session_destroy();
-        header('Location: ../');
+        header('Location: ../public/');
     }
 
     public function config() {
         if (isset($_SESSION['login']) && $_SESSION['login'] == true) {
             include_once '../app/views/config.php';
         } else {
-            header('Location: ../');
+            header('Location: ../public/');
         }
     }
 
@@ -107,17 +107,17 @@ class UserController {
                     if (password_verify($senhaAtual, $currentUserData['senha'])) {
                         $isModified = true;
                     } else {
-                        header('Location: /configurações');
+                        header('Location: ../public/configurações');
                         $_SESSION['error_message'] = "Senha atual incorreta.";
                         exit;
                     }
                 } else {
-                    header('Location: /configurações');
+                    header('Location: ../public/configurações');
                     $_SESSION['error_message'] = "A nova senha e a confirmação da senha não coincidem.";
                     exit;
                 }
             }else{
-                header('Location: /configurações');
+                header('Location: ../public/configurações');
                 $_SESSION['error_message'] = "A nova senha não pode ter sido utilizada anteriormente!";
                 exit;
             }
@@ -135,7 +135,7 @@ class UserController {
             if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
                 $isModified = true;
             } else {
-                header('Location: /configurações');
+                header('Location: ../public/configurações');
                 $_SESSION['error_message'] = "Erro ao fazer upload da imagem.";
                 exit;
                 
@@ -145,7 +145,7 @@ class UserController {
         if ($isModified) {
             $this->userModel->updateUser($novoNome, $novoEmail, $novaSenha, $imagePath);
             echo "Dados atualizados com sucesso.";
-            header('Location: /');
+            header('Location: ../public/');
         } else {
             echo "Nenhuma modificação foi feita.";
         }

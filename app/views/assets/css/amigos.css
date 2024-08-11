@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    height: 100%;
+    width: 20vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.content h2 {
+    color: #333;
+}
+
+.content p {
+    color: #666;
+}
+
+.sidebar ul li.amigos {
+    background-color: blue;
+}
+
+.content {
+    margin-left: 20vw;
+    width: 75vw;
+    padding: 20px;
+}
+
+.content button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.content form {
+    margin-bottom: 20px;
+}
+
+.content form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.content form#cadastrar_amigos{
+    display: none;
+}
+
+.content form#cadastrar_amigos input[type="text"],
+.content form#cadastrar_amigos input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.content form#cadastrar_amigos input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content form#cadastrar_amigos input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content table th,
+.content table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.content table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.content table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.content table tr:hover {
+    background-color: #ddd;
+}
+
+.content .not-found {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+#mostrarOcultarBtn {
+    margin: 10px 0;
+    background-color: #007bff;
+}
+
+#cadastrar_amigos {
+    display: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: transparent;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    flex-grow: 1;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container button img {
+    width: 36px;
+    height: 36px;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #999;
+}
+
+td .nao-editavel {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+td .editavel {
+    background: none;
+    color: #000;
+    border: 1px solid #ccc;
+    cursor: text;
+    padding: 10px;
+}
+
+[id^="editAmigo"] {
+    background-color: #007bff;
+}
+
+[id^="confirmEditAmigo"] {
+    display: none;
+    background-color: #4CAF50;
+}
+
+[id^="cancelEditAmigo"] {
+    display: none;
+    background-color: #F44336;
+}
+
+[id^="deleteAmigo"] {
+    background-color: #F44336;
+}
+
+.alert {
+    background-color: rgba(255, 0, 0, 0.3);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.refresh-button {
+    margin-top: 5px;
+    padding: 20px 0px;
+    font-size: 20px;
+    color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

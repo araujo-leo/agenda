@@ -1,6 +1,4 @@
 <?php
-
-// Definir as rotas
 $routes = [
     '' => 'HomeController@index', 
     'about' => 'HomeController@about', 
@@ -10,7 +8,11 @@ $routes = [
     'amigos' => 'AmigosController@index',
     'comercios' => 'ComercioController@index',
     'configurações' => 'UserController@config',
-    'updateuserconfig' => 'UserController@updateConfig'
+    'updateuserconfig' => 'UserController@updateConfig',
+    'updateamigo' => 'AmigosController@updateAmigo',
+    'updatecomercio' => 'ComercioController@updateComercio',
+    'deletaramigo' => 'AmigosController@deleteAmigo',
+    'deletarcomercio' => 'ComercioController@deleteComercio'
 ];
 
 return $routes;
