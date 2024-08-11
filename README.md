@@ -14,8 +14,6 @@ A ideia de desenvolvimento deste projeto foi inicialmente concebida no Instituto
 
 * Configuração do Usuário: Os usuários têm acesso a uma página de configurações onde podem atualizar suas informações de perfil e alterar sua senha.
 
-* Interface de Usuário Aprimorada: A aplicação utiliza a biblioteca de ícones Font Awesome para uma interface moderna e visualmente atraente. O Sweet Alert é integrado para fornecer alertas e notificações elegantes, melhorando a experiência do usuário.
-
 ## Tecnologias Utilizadas
 
 * PHP: A lógica central e as funcionalidades de backend da aplicação são construídas usando PHP puro, garantindo uma arquitetura robusta e escalável.
